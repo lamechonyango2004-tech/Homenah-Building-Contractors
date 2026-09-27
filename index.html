@@ -1,802 +1,1236 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Lamech Digital creates professional website design and digital solutions for small businesses in Kenya. Build a stronger online presence with a mobile-first website, WhatsApp integration, SEO and business growth support."
-    />
-    <meta name="title" content="Lamech Digital | Website Design for Small Businesses in Kenya" />
-    <meta name="theme-color" content="#081923" />
-    <meta property="og:title" content="Lamech Digital | Professional Website Design for Kenyan Businesses" />
-    <meta
-      property="og:description"
-      content="Professional, mobile-first websites that help small businesses get found, build trust and convert enquiries into real customer conversations."
-    />
-    <meta property="og:type" content="website" />
-    <title>Lamech Digital | Website Design for Small Businesses in Kenya</title>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <nav class="navbar container" aria-label="Main navigation">
-        <a class="brand" href="#home" aria-label="Lamech Digital home">
-          <span class="brand-mark">LD</span>
-          <span class="brand-text">Lamech Digital</span>
-        </a>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Homenah Building Contractors — Building, Inspection &amp; Structural Design</title>
+<meta name="description" content="Homenah Building Contractors: residential and commercial construction, independent site inspections, structural and architectural design, and renovations." />
 
-        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+<style>
+  :root {
+    --maroon: #6b1f2a;
+    --maroon-dark: #4c151d;
+    --gold: #c9a227;
+    --gold-light: #e6c65c;
+    --cream: #f7f3ec;
+    --cream-dim: #efe9dc;
+    --charcoal: #2b2320;
+    --line: #d8cdbb;
+    --muted: #6b6156;
+    --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --max: 1180px;
+  }
 
-        <div class="nav-links" aria-label="Main nav links">
-          <a href="#home">Home</a>
-          <a href="#services">Services</a>
-          <a href="#portfolio">Work</a>
-          <a href="#process">Process</a>
-          <a href="#about">About</a>
-          <a href="#faq">FAQ</a>
-          <a href="#contact">Contact</a>
-          <a class="nav-cta" href="#contact">Start Your Project</a>
-          <a class="mobile-whatsapp" href="https://wa.me/254742038072?text=Hello%20Lamech%20Digital%2C%20I%20would%20like%20to%20discuss%20a%20website%20for%20my%20business." target="_blank" rel="noreferrer">WhatsApp</a>
-        </div>
-      </nav>
-    </header>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
 
-    <main>
-      <section id="home" class="hero section reveal">
-        <div class="container hero-layout">
-          <div class="hero-copy">
-            <p class="eyebrow">Website Design Kenya</p>
-            <h1>Get Found. Get Contacted. Get Paid — All From One Website.</h1>
-            <p class="tagline">
-              Professional, mobile-first websites for small and local businesses — designed to showcase your services, build trust, and turn visitors into real customer enquiries.
-            </p>
+  body {
+    margin: 0;
+    font-family: var(--font-body);
+    color: var(--charcoal);
+    background: var(--cream);
+    line-height: 1.55;
+  }
 
-            <div class="cta-row">
-              <a class="button primary" href="#contact">Get a Free Website Consultation</a>
-              <a class="button secondary" href="#portfolio">View My Work</a>
-            </div>
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
 
-            <a
-              class="whatsapp-cta"
-              href="https://wa.me/254742038072?text=Hello%20Lamech%20Digital%2C%20I%20would%20like%20to%20discuss%20a%20website%20for%20my%20business."
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Chat on WhatsApp"
-            >
-              <span class="whatsapp-badge">WhatsApp</span>
-              Chat with Lamech on WhatsApp
-            </a>
+  .container { max-width: var(--max); margin: 0 auto; padding: 0 28px; }
 
-            <ul class="hero-points" aria-label="Business value points">
-              <li>Business-focused design</li>
-              <li>WhatsApp-ready enquiries</li>
-              <li>Mobile-first experience</li>
-            </ul>
-          </div>
+  h1, h2, h3, h4 { font-family: var(--font-display); margin: 0; }
 
-          <div class="hero-visual" aria-label="Website preview panel">
-            <div class="window-card" role="img" aria-label="Modern website preview for a local business">
-              <div class="window-header">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-              <div class="window-body">
-                <div class="panel-topline">
-                  <div>
-                    <small>Business-ready</small>
-                    <strong>Website Overview</strong>
-                  </div>
-                  <span class="status-pill">Live</span>
-                </div>
+  .eyebrow-none {} /* deliberately no tracked-out eyebrow labels site-wide */
 
-                <div class="business-grid">
-                  <div class="metric-card">
-                    <span>Responsive</span>
-                    <strong>Mobile</strong>
-                  </div>
-                  <div class="metric-card accent">
-                    <span>Contact</span>
-                    <strong>WhatsApp</strong>
-                  </div>
-                  <div class="metric-card">
-                    <span>Visibility</span>
-                    <strong>SEO</strong>
-                  </div>
-                  <div class="metric-card accent">
-                    <span>Payment</span>
-                    <strong>M-Pesa</strong>
-                  </div>
-                </div>
+  section { padding: 88px 0; }
+  section + section { border-top: 1px solid var(--line); }
 
-                <div class="business-summary">
-                  <div>
-                    <label>Focus</label>
-                    <p>Small business growth</p>
-                  </div>
-                  <div>
-                    <label>Outcome</label>
-                    <p>More trust + enquiries</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+  .section-head { max-width: 640px; margin-bottom: 48px; }
+  .section-head h2 { font-size: clamp(1.7rem, 3vw, 2.3rem); line-height: 1.2; margin-bottom: 14px; }
+  .section-head p { color: var(--muted); font-size: 1.02rem; max-width: 60ch; }
 
-      <section class="trust-strip" aria-label="Business value highlights">
-        <div class="container trust-strip-inner">
-          <div class="trust-item">
-            <span class="trust-icon">01</span>
-            <span>Mobile-first design</span>
-          </div>
-          <div class="trust-item">
-            <span class="trust-icon">02</span>
-            <span>WhatsApp-ready</span>
-          </div>
-          <div class="trust-item">
-            <span class="trust-icon">03</span>
-            <span>SEO-ready</span>
-          </div>
-          <div class="trust-item">
-            <span class="trust-icon">04</span>
-            <span>M-Pesa ready</span>
-          </div>
-          <div class="trust-item">
-            <span class="trust-icon">05</span>
-            <span>Fast deployment</span>
-          </div>
-        </div>
-      </section>
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 26px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-body);
+  }
+  .btn-primary { background: var(--maroon); color: var(--cream); }
+  .btn-primary:hover { background: var(--maroon-dark); }
+  .btn-outline { background: transparent; color: var(--charcoal); border: 1px solid var(--charcoal); }
+  .btn-outline:hover { background: var(--charcoal); color: var(--cream); }
+  .btn-gold { background: var(--gold); color: var(--charcoal); }
+  .btn-gold:hover { background: var(--gold-light); }
 
-      <section class="section problem-solution reveal" aria-labelledby="problem-heading">
-        <div class="container problem-layout">
-          <div class="problem-copy">
-            <p class="eyebrow">Why It Matters</p>
-            <h2 id="problem-heading">Your Customers Are Already Online.</h2>
-            <p>
-              Before contacting a business, customers usually search online, check its services and look for a convenient way to get in touch. Your website should make that decision easier.
-            </p>
-            <div class="problem-messaging">
-              <p><strong>Lamech Digital helps fix all three.</strong></p>
-            </div>
-          </div>
+  /* ---------------- Top contact bar ---------------- */
+  .top-contact-bar {
+    background: var(--maroon-dark);
+    color: var(--cream);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    font-size: 0.8rem;
+  }
+  .top-contact-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    min-height: 42px;
+    flex-wrap: wrap;
+  }
+  .top-contact-inner span { opacity: 0.9; }
+  .top-contact-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .top-contact-links a { color: var(--cream); font-weight: 600; }
+  .top-contact-links a:hover { color: var(--gold-light); }
 
-          <div class="problem-grid">
-            <article class="problem-card">
-              <span class="problem-number">01</span>
-              <h3>Hard to Find</h3>
-              <p>Customers struggle to discover your business when your online presence is weak or inconsistent.</p>
-            </article>
-            <article class="problem-card">
-              <span class="problem-number">02</span>
-              <h3>Hard to Trust</h3>
-              <p>An outdated or missing website can make a business feel less credible before a customer reaches out.</p>
-            </article>
-            <article class="problem-card">
-              <span class="problem-number">03</span>
-              <h3>Hard to Contact</h3>
-              <p>Customers should never have to search across multiple platforms just to ask a simple question.</p>
-            </article>
-          </div>
-        </div>
-      </section>
+  /* ---------------- Header ---------------- */
+  header.site {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--cream);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+  }
+  .brand { display: flex; align-items: center; gap: 10px; }
+  .brand .mark {
+    width: 24px; height: 24px;
+    background: var(--maroon);
+    border: 2px solid var(--gold);
+    transform: rotate(45deg);
+  }
+  .brand span { font-family: var(--font-display); font-size: 1.15rem; }
 
-      <section class="value section reveal" aria-labelledby="value-heading">
-        <div class="container">
-          <div class="section-heading centered narrow-heading">
-            <p class="eyebrow">What You Get</p>
-            <h2 id="value-heading">Everything Your Business Needs to Get Online</h2>
-          </div>
+  nav.main-links { display: flex; gap: 28px; }
+  nav.main-links a { font-size: 0.92rem; font-weight: 600; color: var(--muted); }
+  nav.main-links a:hover { color: var(--maroon); }
 
-          <div class="value-grid">
-            <article class="info-card">
-              <div class="icon-wrap">01</div>
-              <h3>Professional Website</h3>
-              <p>Clean, modern design that makes your business look credible and trustworthy from the first click.</p>
-            </article>
-            <article class="info-card">
-              <div class="icon-wrap">02</div>
-              <h3>Mobile-First Design</h3>
-              <p>Your website will work smoothly on phones, tablets, and desktops without frustrating users.</p>
-            </article>
-            <article class="info-card">
-              <div class="icon-wrap">03</div>
-              <h3>WhatsApp Customer Enquiries</h3>
-              <p>Make it easy for visitors to contact you instantly through a direct business conversation.</p>
-            </article>
-            <article class="info-card">
-              <div class="icon-wrap">04</div>
-              <h3>Google Business Profile</h3>
-              <p>Strengthen your local online presence so customers can find and trust your business.</p>
-            </article>
-            <article class="info-card">
-              <div class="icon-wrap">05</div>
-              <h3>Basic SEO</h3>
-              <p>Improve your visibility in search and make it easier for new customers to discover you.</p>
-            </article>
-            <article class="info-card">
-              <div class="icon-wrap">06</div>
-              <h3>M-Pesa Integration</h3>
-              <p>Offer convenient payment options when your business needs online transactions.</p>
-            </article>
-            <article class="info-card">
-              <div class="icon-wrap">07</div>
-              <h3>Fast Deployment</h3>
-              <p>Launch your site quickly and keep the process simple from start to finish.</p>
-            </article>
-            <article class="info-card">
-              <div class="icon-wrap">08</div>
-              <h3>Business Automation</h3>
-              <p>Streamline customer questions and keep communication efficient and consistent.</p>
-            </article>
-          </div>
-        </div>
-      </section>
+  .nav-actions { display: flex; align-items: center; gap: 14px; }
+  .nav-toggle {
+    display: none;
+    background: none; border: none; font-size: 1.4rem; cursor: pointer;
+  }
 
-      <section id="services" class="section services reveal">
-        <div class="container">
-          <div class="section-heading centered narrow-heading">
-            <p class="eyebrow">Services</p>
-            <h2>Professional website solutions for growing businesses</h2>
-          </div>
+  @media (max-width: 900px) {
+    nav.main-links { display: none; }
+    .nav-toggle { display: block; }
+  }
 
-          <div class="services-grid">
-            <article class="service-card reveal">
-              <div class="service-icon">01</div>
-              <h3>Website Design &amp; Development</h3>
-              <p>Modern websites designed around your business, services and customers.</p>
-              <a href="#contact">Learn More</a>
-            </article>
-            <article class="service-card reveal">
-              <div class="service-icon">02</div>
-              <h3>WhatsApp Integration</h3>
-              <p>Make it easy for visitors to contact your business instantly through WhatsApp.</p>
-              <a href="#contact">Learn More</a>
-            </article>
-            <article class="service-card reveal">
-              <div class="service-icon">03</div>
-              <h3>M-Pesa Integration</h3>
-              <p>Give customers convenient payment options when your business requires online payments.</p>
-              <a href="#contact">Learn More</a>
-            </article>
-            <article class="service-card reveal">
-              <div class="service-icon">04</div>
-              <h3>Basic SEO</h3>
-              <p>Improve your website's visibility and make it easier for customers to discover your business online.</p>
-              <a href="#contact">Learn More</a>
-            </article>
-            <article class="service-card reveal">
-              <div class="service-icon">05</div>
-              <h3>Google Business Profile</h3>
-              <p>Strengthen your local online presence and help customers find your business on Google.</p>
-              <a href="#contact">Learn More</a>
-            </article>
-            <article class="service-card reveal">
-              <div class="service-icon">06</div>
-              <h3>Chatbot &amp; Automation</h3>
-              <p>Automate common customer questions and streamline enquiries.</p>
-              <a href="#contact">Learn More</a>
-            </article>
-            <article class="service-card reveal">
-              <div class="service-icon">07</div>
-              <h3>Hosting &amp; Deployment</h3>
-              <p>Get your website deployed and ready for customers without unnecessary technical complexity.</p>
-              <a href="#contact">Learn More</a>
-            </article>
-          </div>
-        </div>
-      </section>
+  /* ---------------- Hero ---------------- */
+  .hero {
+    background: var(--maroon);
+    color: var(--cream);
+    padding: 100px 0 70px;
+    background-image: repeating-linear-gradient(135deg, rgba(255,255,255,0.03) 0 2px, transparent 2px 30px);
+  }
+  .hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 48px; align-items: center; }
+  .hero h1 { font-size: clamp(2.2rem, 4.4vw, 3.4rem); line-height: 1.12; margin-bottom: 20px; max-width: 15ch; }
+  .hero p.lead { font-size: 1.08rem; color: rgba(247,243,236,0.85); max-width: 46ch; margin-bottom: 32px; }
+  .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+  .hero-phones {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 0.9rem;
+    color: rgba(247,243,236,0.95);
+    font-weight: 600;
+  }
+  .hero-phones a { color: var(--gold-light); }
 
-      <section id="portfolio" class="section portfolio reveal">
-        <div class="container">
-          <div class="section-heading centered narrow-heading">
-            <p class="eyebrow">Portfolio</p>
-            <h2>See What I Can Build for Your Business</h2>
-            <p class="section-intro">Explore examples of professional websites designed around real business services and customer needs.</p>
-          </div>
+  .hero-diagram { border: 1px solid rgba(247,243,236,0.25); padding: 18px; }
+  .hero-diagram svg { width: 100%; height: auto; }
 
-          <div class="projects-grid">
-            <article class="project-card reveal">
-              <div class="project-image project-one">
-                <img src="images/garage-screenshot.png" alt="The Garage project screenshot" loading="lazy" />
-                <span>Featured Project</span>
-              </div>
-              <div class="project-body">
-                <p class="project-tag">Machinery Services</p>
-                <h3>The Garage</h3>
-                <p>Professional website for a machinery and automotive service business focused on clarity, trust and fast contact.</p>
-                <ul class="project-meta">
-                  <li>Responsive layout</li>
-                  <li>Local service focus</li>
-                  <li>Business enquiry flow</li>
-                </ul>
-                <a href="https://the-garage-kisumu.netlify.app" target="_blank" rel="noreferrer">View Project</a>
-              </div>
-            </article>
+  .site-engineer {
+    background: linear-gradient(180deg, rgba(107,31,42,0.05), rgba(107,31,42,0.12));
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 54px 0 26px;
+  }
+  .engineer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 36px;
+    align-items: center;
+  }
+  .engineer-figure {
+    background: linear-gradient(180deg, #e9e1d5, #f2ece2);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 18px;
+    box-shadow: 0 24px 36px rgba(43,35,32,0.08);
+  }
+  .engineer-figure svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+  }
+  .engineer-copy {
+    padding: 8px 0;
+  }
+  .engineer-copy .eyebrow-none {
+    display: inline-block;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--maroon);
+    font-size: 0.72rem;
+    font-weight: 700;
+  }
+  .engineer-copy h2 {
+    font-size: clamp(2rem, 2.8vw, 2.8rem);
+    margin-bottom: 10px;
+    color: var(--charcoal);
+  }
+  .engineer-sub {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    color: var(--maroon);
+    margin-bottom: 20px;
+  }
+  .engineer-copy p {
+    margin-bottom: 18px;
+    color: var(--muted);
+  }
+  .engineer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 26px;
+    display: grid;
+    gap: 10px;
+    color: var(--charcoal);
+  }
+  .engineer-list li {
+    position: relative;
+    padding-left: 22px;
+    font-size: 0.96rem;
+  }
+  .engineer-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--gold);
+    font-weight: 700;
+  }
+  .engineer-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
 
-            <article class="project-card reveal">
-              <div class="project-image project-two">
-                <img src="images/kevin-screenshot.png" alt="Building Inspection Services project screenshot" loading="lazy" />
-                <span>Featured Project</span>
-              </div>
-              <div class="project-body">
-                <p class="project-tag">Inspection Services</p>
-                <h3>Building Inspection Services</h3>
-                <p>Modern service site built to present expertise, build trust and make it simple for clients to contact the business.</p>
-                <ul class="project-meta">
-                  <li>Professional branding</li>
-                  <li>Service-focused pages</li>
-                  <li>Lead-friendly layout</li>
-                </ul>
-                <a href="https://home-building-inspectors.netlify.app" target="_blank" rel="noreferrer">View Project</a>
-              </div>
-            </article>
+  @media (max-width: 880px) {
+    .engineer-grid { grid-template-columns: 1fr; }
+  }
 
-            <article class="project-card reveal">
-              <div class="project-image project-three">
-                <img src="images/homenah-screenshot.png" alt="Homenah Building Contractors project screenshot" loading="lazy" />
-                <span>Concept Project</span>
-              </div>
-              <div class="project-body">
-                <p class="project-tag">Construction &amp; Building</p>
-                <h3>Homenah Building Contractors</h3>
-                <p>Concept website for a building and construction business, designed to highlight services, trust signals and direct enquiries.</p>
-                <ul class="project-meta">
-                  <li>Full services showcase</li>
-                  <li>WhatsApp enquiry flow</li>
-                  <li>Trusted professional look</li>
-                </ul>
-                <a href="https://homenahbuildingcontractors.netlify.app" target="_blank" rel="noreferrer">View Project</a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
+  .stats-bar {
+    background: var(--maroon-dark);
+  }
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    padding: 30px 0;
+  }
+  .stats-grid div { color: var(--cream); border-right: 1px solid rgba(247,243,236,0.15); }
+  .stats-grid div:last-child { border-right: none; }
+  .stats-grid .num { font-family: var(--font-display); font-size: 2rem; color: var(--gold-light); }
+  .stats-grid .label { font-size: 0.82rem; color: rgba(247,243,236,0.75); margin-top: 4px; }
 
-      <section class="section credibility reveal">
-        <div class="container">
-          <div class="section-heading centered narrow-heading">
-            <p class="eyebrow">Why Choose Me</p>
-            <h2>Why Businesses Choose Lamech Digital</h2>
-          </div>
+  @media (max-width: 900px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 20px 0; }
+    .stats-grid div { border-right: none; }
+  }
 
-          <div class="credibility-grid">
-            <div class="credibility-card">
-              <h3>Business-focused design</h3>
-              <p>Every website is designed around your actual services, customer journey and business goals.</p>
-            </div>
-            <div class="credibility-card">
-              <h3>Mobile-first websites</h3>
-              <p>Modern websites that feel professional and work seamlessly on phones, tablets and laptops.</p>
-            </div>
-            <div class="credibility-card">
-              <h3>Local Kenyan business understanding</h3>
-              <p>I build websites with the realities of Kenyan small businesses and customer behaviour in mind.</p>
-            </div>
-            <div class="credibility-card">
-              <h3>WhatsApp-ready communication</h3>
-              <p>Visitors can reach your business quickly through an immediate chat flow that feels natural.</p>
-            </div>
-            <div class="credibility-card">
-              <h3>Practical digital solutions</h3>
-              <p>My focus is on useful business tools, not unnecessary features that make the site harder to manage.</p>
-            </div>
-            <div class="credibility-card">
-              <h3>Clear communication</h3>
-              <p>You receive straightforward guidance and a process that is easy to understand from start to launch.</p>
-            </div>
-            <div class="credibility-card">
-              <h3>Affordable solutions</h3>
-              <p>Professional websites designed to help small and growing businesses establish a stronger online presence.</p>
-            </div>
-            <div class="credibility-card">
-              <h3>Ongoing support</h3>
-              <p>I aim to create websites that are easy to maintain and ready for future updates as your business grows.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+  /* ---------------- Services ---------------- */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+  .service-card {
+    background: var(--cream);
+    padding: 32px 26px;
+  }
+  .service-card .icon { margin-bottom: 18px; }
+  .service-card h3 { font-size: 1.15rem; margin-bottom: 10px; }
+  .service-card p { font-size: 0.92rem; color: var(--muted); margin: 0; }
 
-      <section id="process" class="section process reveal">
-        <div class="container">
-          <div class="section-heading centered narrow-heading">
-            <p class="eyebrow">Process</p>
-            <h2>A simple process from idea to launch</h2>
-          </div>
+  @media (max-width: 900px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .services-grid { grid-template-columns: 1fr; } }
 
-          <div class="process-grid">
-            <div class="process-step reveal">
-              <span>01</span>
-              <h3>Discover</h3>
-              <p>Tell me about your business, customers and goals.</p>
-            </div>
-            <div class="process-step reveal">
-              <span>02</span>
-              <h3>Design</h3>
-              <p>I create a modern website structure and visual direction around your business.</p>
-            </div>
-            <div class="process-step reveal">
-              <span>03</span>
-              <h3>Build</h3>
-              <p>I develop and optimize the website for mobile, speed and usability.</p>
-            </div>
-            <div class="process-step reveal">
-              <span>04</span>
-              <h3>Launch</h3>
-              <p>Your website goes live and is ready for customers.</p>
-            </div>
-          </div>
+  /* ---------------- Design & Structural ---------------- */
+  .design-block {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 56px;
+    align-items: center;
+    padding: 56px 0;
+  }
+  .design-block:not(:last-child) { border-bottom: 1px solid var(--line); }
+  .design-block.reverse { grid-template-columns: 1.05fr 0.95fr; }
+  .design-block.reverse .design-copy { order: 2; }
+  .design-block.reverse .design-figure { order: 1; }
 
-          <div class="cta-block reveal">
-            <a class="button primary" href="#contact">Start Your Project</a>
-          </div>
-        </div>
-      </section>
+  .design-copy h3 { font-size: 1.5rem; margin-bottom: 12px; }
+  .design-copy p.desc { color: var(--muted); margin-bottom: 18px; }
+  .design-copy ul { padding-left: 20px; margin: 0; color: var(--charcoal); }
+  .design-copy ul li { margin-bottom: 8px; font-size: 0.95rem; }
 
-      <section class="section packages reveal">
-        <div class="container">
-          <div class="section-heading centered narrow-heading">
-            <p class="eyebrow">Packages</p>
-            <h2>Choose the right website package for your business</h2>
-          </div>
+  .design-figure {
+    background: var(--cream-dim);
+    border: 1px solid var(--line);
+    padding: 22px;
+  }
+  .design-figure svg { width: 100%; height: auto; }
+  .figure-caption { font-size: 0.78rem; color: var(--muted); margin-top: 10px; text-align: center; }
 
-          <div class="package-grid">
-            <article class="package-card">
-              <div class="package-header">
-                <h3>Starter</h3>
-                <p>For businesses getting online for the first time.</p>
-              </div>
-              <ul>
-                <li>Professional website</li>
-                <li>Mobile responsive design</li>
-                <li>WhatsApp button</li>
-                <li>Contact form</li>
-                <li>Google Maps</li>
-                <li>Basic SEO</li>
-                <li>Website deployment</li>
-              </ul>
-              <a class="button secondary" href="#contact">Request a Quote</a>
-            </article>
+  @media (max-width: 880px) {
+    .design-block, .design-block.reverse { grid-template-columns: 1fr; }
+    .design-block.reverse .design-copy,
+    .design-block.reverse .design-figure { order: initial; }
+  }
 
-            <article class="package-card featured">
-              <div class="package-badge">Most Popular</div>
-              <div class="package-header">
-                <h3>Business</h3>
-                <p>For businesses that want a stronger online presence.</p>
-              </div>
-              <ul>
-                <li>Multi-page website</li>
-                <li>Professional design</li>
-                <li>WhatsApp integration</li>
-                <li>Google Business Profile setup</li>
-                <li>Basic SEO</li>
-                <li>Image/gallery section</li>
-                <li>Contact forms</li>
-                <li>Analytics setup</li>
-              </ul>
-              <a class="button primary" href="#contact">Request a Quote</a>
-            </article>
+  /* ---------------- Capabilities table ---------------- */
+  table.specs {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+  }
+  table.specs th, table.specs td {
+    text-align: left;
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--line);
+  }
+  table.specs th { color: var(--muted); font-weight: 600; width: 34%; }
+  .specs-wrap { border: 1px solid var(--line); }
 
-            <article class="package-card">
-              <div class="package-header">
-                <h3>Professional</h3>
-                <p>For businesses requiring advanced functionality.</p>
-              </div>
-              <ul>
-                <li>Custom website</li>
-                <li>Advanced forms</li>
-                <li>WhatsApp automation</li>
-                <li>Chatbot</li>
-                <li>M-Pesa integration where applicable</li>
-                <li>Advanced business functionality</li>
-                <li>SEO setup</li>
-                <li>Analytics</li>
-              </ul>
-              <a class="button secondary" href="#contact">Discuss My Project</a>
-            </article>
-          </div>
-        </div>
-      </section>
+  /* ---------------- Process ---------------- */
+  .process-list { counter-reset: step; display: grid; gap: 0; }
+  .process-item {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 20px;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .process-item:last-child { border-bottom: none; }
+  .process-item .step-num {
+    counter-increment: step;
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    color: var(--gold);
+  }
+  .process-item .step-num::before { content: counter(step, decimal-leading-zero); }
+  .process-item h4 { font-size: 1.05rem; margin-bottom: 6px; }
+  .process-item p { color: var(--muted); font-size: 0.92rem; margin: 0; max-width: 60ch; }
 
-      <section id="about" class="section about reveal">
-        <div class="container about-layout">
-          <div class="about-copy">
-            <p class="eyebrow">About</p>
-            <h2>Hi, I’m Lamech — the person behind Lamech Digital.</h2>
-            <p>
-              I help small and growing businesses build professional websites that make it easier for customers to discover their services, understand what they offer and get in touch.
-            </p>
-            <p>
-              My focus is on practical digital solutions that look professional, work smoothly on mobile devices and are designed around the needs of real businesses.
-            </p>
-            <a class="button primary" href="#contact">Book a Consultation</a>
-          </div>
+  /* ---------------- Projects ---------------- */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .project-card { border: 1px solid var(--line); background: var(--cream); }
+  .project-thumb {
+    aspect-ratio: 4 / 3;
+    background: var(--cream-dim);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    font-size: 0.8rem;
+    border-bottom: 1px solid var(--line);
+  }
+  .project-body { padding: 18px 20px; }
+  .project-body .tag { font-size: 0.75rem; color: var(--maroon); font-weight: 700; }
+  .project-body h4 { font-size: 1.05rem; margin: 6px 0; }
+  .project-body p { font-size: 0.88rem; color: var(--muted); margin: 0; }
 
-          <div class="about-panel">
-            <div class="panel-block">
-              <strong>Professional online presence</strong>
-              <p>Web design that helps your business look trustworthy and easy to deal with.</p>
-            </div>
-            <div class="panel-block">
-              <strong>Built for action</strong>
-              <p>Clear calls to action, WhatsApp conversations, and customer contact points that work.</p>
-            </div>
-            <div class="panel-block">
-              <strong>Small business friendly</strong>
-              <p>Affordable, practical solutions designed for growing companies and local service providers.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+  @media (max-width: 900px) { .projects-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 600px) { .projects-grid { grid-template-columns: 1fr; } }
 
-      <section class="section testimonial reveal">
-        <div class="container">
-          <div class="section-heading centered narrow-heading">
-            <p class="eyebrow">Building Trust</p>
-            <h2>Building Trust, One Project at a Time</h2>
-          </div>
+  /* ---------------- Testimonials ---------------- */
+  .testi-wrap { position: relative; max-width: 760px; }
+  .testi-slide {
+    display: none;
+    background: var(--cream-dim);
+    border-left: 3px solid var(--gold);
+    padding: 32px 36px;
+  }
+  .testi-slide.active { display: block; }
+  .testi-slide p.quote { font-size: 1.1rem; font-family: var(--font-display); font-style: italic; margin: 0 0 16px; }
+  .testi-slide .who { font-size: 0.85rem; color: var(--muted); }
+  .testi-dots { display: flex; gap: 8px; margin-top: 18px; }
+  .testi-dots button {
+    width: 9px; height: 9px; border-radius: 50%;
+    border: none; background: var(--line); cursor: pointer; padding: 0;
+  }
+  .testi-dots button.active { background: var(--maroon); }
 
-          <div class="testimonial-box">
-            <p>
-              I’m currently building my portfolio of business projects. If you’re one of my early clients, your feedback can help other businesses understand what it’s like to work with Lamech Digital.
-            </p>
-            <a class="button primary" href="#contact">Work With Me</a>
-          </div>
-        </div>
-      </section>
+  /* ---------------- Team ---------------- */
+  .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  .team-card { text-align: left; }
+  .team-photo {
+    aspect-ratio: 1;
+    background: var(--cream-dim);
+    border: 1px solid var(--line);
+    margin-bottom: 14px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--muted); font-size: 0.8rem;
+  }
+  .team-card h4 { font-size: 1.05rem; margin-bottom: 2px; }
+  .team-card .role { font-size: 0.85rem; color: var(--gold); font-weight: 700; margin-bottom: 8px; }
+  .team-card p.bio { font-size: 0.88rem; color: var(--muted); margin: 0; }
 
-      <section id="faq" class="section faq reveal">
-        <div class="container faq-layout">
-          <div class="section-heading">
-            <p class="eyebrow">FAQ</p>
-            <h2>Helpful answers before you get started</h2>
-          </div>
+  @media (max-width: 800px) { .team-grid { grid-template-columns: 1fr; } }
 
-          <div class="faq-list">
-            <details open>
-              <summary>How long does it take to build a website?</summary>
-              <p>Most small business websites take a few days to a couple of weeks depending on the scope, the amount of content and how quickly feedback is provided.</p>
-            </details>
-            <details>
-              <summary>Can you build a website for my small business?</summary>
-              <p>Yes. I build websites for small businesses, service providers and local brands that need a clearer online presence and easier customer contact.</p>
-            </details>
-            <details>
-              <summary>Will my website work on phones?</summary>
-              <p>Yes. Mobile-first design is a core part of how I build websites so they work smoothly on phones, tablets and desktops.</p>
-            </details>
-            <details>
-              <summary>Can customers contact me through WhatsApp?</summary>
-              <p>Yes. I can add direct WhatsApp links and chat flows so visitors can contact your business instantly.</p>
-            </details>
-            <details>
-              <summary>Can you integrate M-Pesa?</summary>
-              <p>Yes, when it is relevant to your business operations and the required payment workflow.</p>
-            </details>
-            <details>
-              <summary>Do you provide hosting and deployment?</summary>
-              <p>Yes. I can help with deployment and make sure your site is ready to go live without unnecessary complexity.</p>
-            </details>
-            <details>
-              <summary>Can you help my business appear on Google?</summary>
-              <p>Yes. I can support local visibility with Google Business Profile guidance and basic SEO setup as part of a practical online presence strategy.</p>
-            </details>
-            <details>
-              <summary>Can I update the website later?</summary>
-              <p>Yes. I build websites in a way that makes future updates and content changes straightforward as your business evolves.</p>
-            </details>
-          </div>
-        </div>
-      </section>
+  /* ---------------- FAQ ---------------- */
+  .faq-item { border-bottom: 1px solid var(--line); }
+  .faq-q {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 20px 0;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .faq-q .plus { font-size: 1.3rem; color: var(--gold); transition: transform 0.15s ease; }
+  .faq-item.open .plus { transform: rotate(45deg); }
+  .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.2s ease; }
+  .faq-a p { margin: 0 0 20px; color: var(--muted); font-size: 0.92rem; max-width: 65ch; }
+  .faq-item.open .faq-a { max-height: 240px; }
 
-      <section id="contact" class="section contact reveal">
-        <div class="container contact-layout">
-          <div class="contact-copy">
-            <p class="eyebrow">Contact</p>
-            <h2>Ready to Put Your Business Online?</h2>
-            <p>
-              Let’s create a professional online presence that makes it easier for customers to discover your business, understand your services and contact you.
-            </p>
+  /* ---------------- Contact ---------------- */
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
+  .contact-info h3 { font-size: 1.3rem; margin-bottom: 16px; }
+  .contact-info ul { list-style: none; padding: 0; margin: 0; }
+  .contact-info li { padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 0.92rem; }
+  .contact-info li strong { display: block; font-size: 0.78rem; color: var(--muted); text-transform: none; margin-bottom: 3px; }
 
-            <div class="contact-details">
-              <div>
-                <span>WhatsApp</span>
-                <a href="https://wa.me/254742038072" target="_blank" rel="noreferrer">0742038072</a>
-              </div>
-              <div>
-                <span>Email</span>
-                <a href="mailto:lamechonyango2004@gmail.com">lamechonyango2004@gmail.com</a>
-              </div>
-              <div>
-                <span>Location</span>
-                <a href="#">Kenya</a>
-              </div>
-            </div>
-          </div>
+  .form-field { margin-bottom: 16px; }
+  .form-field label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; }
+  .form-field input, .form-field textarea {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid var(--line);
+    background: #fff;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+  }
+  .form-field textarea { min-height: 120px; resize: vertical; }
+  .form-note { font-size: 0.82rem; color: var(--muted); margin-top: 10px; display: none; }
+  .form-note.show { display: block; }
 
-          <form class="contact-form" id="contactForm" novalidate>
-            <div class="field-row">
-              <div class="field">
-                <label for="name">Name</label>
-                <input id="name" name="name" type="text" placeholder="Your name" required />
-              </div>
-              <div class="field">
-                <label for="businessName">Business name</label>
-                <input id="businessName" name="businessName" type="text" placeholder="Business name" required />
-              </div>
-            </div>
+  @media (max-width: 860px) { .contact-grid { grid-template-columns: 1fr; } }
 
-            <div class="field-row">
-              <div class="field">
-                <label for="phone">Phone / WhatsApp</label>
-                <input id="phone" name="phone" type="tel" placeholder="Your phone or WhatsApp number" required />
-              </div>
-              <div class="field">
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" placeholder="you@example.com" required />
-              </div>
-            </div>
+  /* ---------------- Footer ---------------- */
+  footer.site {
+    background: var(--charcoal);
+    color: rgba(247,243,236,0.8);
+    padding: 56px 0 28px;
+  }
+  .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 32px; }
+  .footer-grid h5 { color: var(--cream); font-family: var(--font-body); font-size: 0.88rem; margin-bottom: 14px; }
+  .footer-grid ul { list-style: none; padding: 0; margin: 0; }
+  .footer-grid li { margin-bottom: 8px; font-size: 0.88rem; }
+  .footer-grid li a:hover { color: var(--gold-light); }
+  .footer-brand p { font-size: 0.88rem; max-width: 32ch; color: rgba(247,243,236,0.65); }
+  .footer-bottom {
+    border-top: 1px solid rgba(247,243,236,0.15);
+    margin-top: 40px;
+    padding-top: 20px;
+    font-size: 0.8rem;
+    color: rgba(247,243,236,0.5);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 
-            <div class="field-row">
-              <div class="field">
-                <label for="industry">What does your business do?</label>
-                <input id="industry" name="industry" type="text" placeholder="e.g. Construction, retail, hospitality" required />
-              </div>
-              <div class="field">
-                <label for="budget">Budget range (optional)</label>
-                <input id="budget" name="budget" type="text" placeholder="e.g. Under KES 50,000" />
-              </div>
-            </div>
+  @media (max-width: 800px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
 
-            <div class="field">
-              <label for="projectNeed">What do you need?</label>
-              <textarea id="projectNeed" name="projectNeed" rows="5" placeholder="Tell me about your business and what kind of website or digital support you need." required></textarea>
-            </div>
+  /* ---------------- Chatbot widget (markup preserved from existing site) ---------------- */
+  .chatbot-launcher {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--maroon);
+    color: var(--cream);
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    z-index: 60;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  }
 
-            <button type="submit" class="button primary submit-button">Request My Free Consultation</button>
-            <p class="form-status" aria-live="polite"></p>
-          </form>
-        </div>
-      </section>
-    </main>
+  .chatbot-window {
+    position: fixed;
+    bottom: 92px;
+    right: 24px;
+    width: 320px;
+    max-width: calc(100vw - 48px);
+    background: var(--cream);
+    border: 1px solid var(--line);
+    z-index: 60;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+  }
+  .chatbot-window.open { display: flex; }
 
-    <section class="section final-cta reveal" aria-labelledby="final-cta-title">
-      <div class="container">
-        <div class="final-cta-box">
-          <p class="eyebrow">Start Today</p>
-          <h2 id="final-cta-title">Your Business Deserves a Professional Online Presence.</h2>
-          <p>
-            Let’s create a website that clearly communicates what you offer and makes it easier for customers to contact you.
-          </p>
-          <div class="cta-row final-cta-row">
-            <a class="button primary" href="#contact">Start My Project</a>
-            <a class="button secondary" href="https://wa.me/254742038072?text=Hello%20Lamech%20Digital%2C%20I%20would%20like%20to%20discuss%20a%20website%20for%20my%20business." target="_blank" rel="noreferrer">Chat on WhatsApp</a>
-          </div>
-        </div>
+  .chatbot-header {
+    background: var(--maroon);
+    color: var(--cream);
+    padding: 14px 16px;
+    font-weight: 600;
+    font-size: 0.92rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .chatbot-header button { background: none; border: none; color: var(--cream); cursor: pointer; font-size: 1rem; }
+
+  .chatbot-body {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 340px;
+    overflow-y: auto;
+  }
+
+  .message {
+    padding: 10px 12px;
+    font-size: 0.88rem;
+    max-width: 85%;
+  }
+  .message.bot-message { background: var(--cream-dim); align-self: flex-start; border: 1px solid var(--line); }
+  .message.user-message { background: var(--maroon); color: var(--cream); align-self: flex-end; }
+
+  .message.typing { display: flex; gap: 4px; align-items: center; background: var(--cream-dim); align-self: flex-start; border: 1px solid var(--line); }
+  .message.typing.hidden { display: none; }
+  .message.typing span {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--muted);
+    animation: bounce 1s infinite ease-in-out;
+  }
+  .message.typing span:nth-child(2) { animation-delay: 0.15s; }
+  .message.typing span:nth-child(3) { animation-delay: 0.3s; }
+  @keyframes bounce { 0%, 60%, 100% { transform: translateY(0); } 30% { transform: translateY(-4px); } }
+
+  .quick-replies { display: flex; flex-wrap: wrap; gap: 8px; }
+  .quick-reply {
+    background: var(--cream);
+    border: 1px solid var(--maroon);
+    color: var(--maroon);
+    padding: 7px 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: var(--font-body);
+  }
+  .quick-reply:hover { background: var(--maroon); color: var(--cream); }
+
+  @media (prefers-reduced-motion: reduce) {
+    .message.typing span { animation: none; }
+  }
+
+  /* Single deliberate reveal-on-scroll moment, applied only to section headings */
+  .section-head { opacity: 0; transform: translateY(14px); transition: opacity 0.5s ease, transform 0.5s ease; }
+  .section-head.in-view { opacity: 1; transform: translateY(0); }
+  @media (prefers-reduced-motion: reduce) {
+    .section-head { opacity: 1; transform: none; transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<div class="top-contact-bar">
+  <div class="container top-contact-inner">
+    <span>Director: Kevin Oluoch</span>
+    <div class="top-contact-links">
+      <a href="tel:0720144481">0720144481</a>
+      <span>|</span>
+      <a href="tel:0106650270">0106650270</a>
+    </div>
+  </div>
+</div>
+
+<header class="site">
+  <div class="container nav-inner">
+    <a class="brand" href="#top">
+      <span class="mark" aria-hidden="true"></span>
+      <span>Homenah Building Contractors</span>
+    </a>
+    <nav class="main-links" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#projects">Our Projects</a>
+      <a href="#why-us">Why Choose Us</a>
+      <a href="#contact">Contact Us</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="login.html" class="btn btn-outline" style="padding:9px 18px;">Client Login</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu">&#9776;</button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top" style="padding-top:70px; border-top:none;">
+  <div class="container hero-grid">
+    <div>
+      <p class="eyebrow-none" style="color: var(--gold-light); letter-spacing: 0.12em; font-size: 0.72rem; text-transform: uppercase; font-weight: 700; margin-bottom: 14px;">HOMENAH BUILDING CONTRACTORS</p>
+      <h1>Building Your Vision, <span style="color: var(--gold-light);">Creating Your Future</span></h1>
+      <p class="lead">From independent building inspection and structural advice to residential and commercial construction, we help clients build with confidence, compliance and clarity.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-gold">Book a Consultation</a>
+        <a href="#services" class="btn btn-outline" style="border-color: rgba(247,243,236,0.5); color: var(--cream);">Our Services</a>
       </div>
-    </section>
-
-    <footer class="site-footer">
-      <div class="container footer-layout">
-        <div class="footer-brand-block">
-          <a class="brand footer-brand" href="#home">
-            <span class="brand-mark">LD</span>
-            <span class="brand-text">Lamech Digital</span>
-          </a>
-          <p>Professional websites and digital solutions for small and growing businesses.</p>
-        </div>
-
-        <div class="footer-links-group">
-          <h3>Quick Links</h3>
-          <div class="footer-links" aria-label="Quick links">
-            <a href="#home">Home</a>
-            <a href="#services">Services</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#about">About</a>
-            <a href="#faq">FAQ</a>
-            <a href="#contact">Contact</a>
-          </div>
-        </div>
-
-        <div class="footer-links-group">
-          <h3>Services</h3>
-          <div class="footer-links service-links" aria-label="Services links">
-            <a href="#services">Website Design</a>
-            <a href="#services">WhatsApp Integration</a>
-            <a href="#services">SEO</a>
-            <a href="#services">Google Business Profile</a>
-            <a href="#services">M-Pesa Integration</a>
-            <a href="#services">Automation</a>
-          </div>
-        </div>
-
-        <div class="footer-links-group">
-          <h3>Contact</h3>
-          <div class="footer-links contact-links" aria-label="Contact details">
-            <a href="https://wa.me/254742038072" target="_blank" rel="noreferrer">WhatsApp</a>
-            <a href="mailto:lamechonyango2004@gmail.com">Email</a>
-            <span>Kenya</span>
-          </div>
-        </div>
+      <div class="hero-phones">
+        <a href="tel:0720144481">0720144481</a>
+        <span>•</span>
+        <a href="tel:0106650270">0106650270</a>
       </div>
+    </div>
+    <div class="hero-diagram" aria-hidden="true">
+      <svg viewBox="0 0 380 300" xmlns="http://www.w3.org/2000/svg">
+        <rect x="20" y="40" width="340" height="220" fill="none" stroke="#e6c65c" stroke-width="1.5"/>
+        <line x1="20" y1="150" x2="360" y2="150" stroke="#e6c65c" stroke-width="1"/>
+        <line x1="150" y1="40" x2="150" y2="260" stroke="#e6c65c" stroke-width="1"/>
+        <line x1="260" y1="40" x2="260" y2="150" stroke="#e6c65c" stroke-width="1"/>
+        <text x="35" y="100" fill="#f7f3ec" font-size="11" font-family="Inter, sans-serif">LIVING</text>
+        <text x="165" y="100" fill="#f7f3ec" font-size="11" font-family="Inter, sans-serif">KITCHEN</text>
+        <text x="275" y="100" fill="#f7f3ec" font-size="11" font-family="Inter, sans-serif">BED 1</text>
+        <text x="35" y="210" fill="#f7f3ec" font-size="11" font-family="Inter, sans-serif">BED 2</text>
+        <text x="200" y="210" fill="#f7f3ec" font-size="11" font-family="Inter, sans-serif">BATH</text>
+        <line x1="20" y1="30" x2="360" y2="30" stroke="#e6c65c" stroke-width="0.75"/>
+        <text x="170" y="24" fill="#e6c65c" font-size="10" font-family="Inter, sans-serif">12.4 m</text>
+      </svg>
+    </div>
+  </div>
+</section>
 
-      <div class="footer-bottom">
-        <p>© <span id="year"></span> Lamech Digital. All rights reserved.</p>
+<section class="site-engineer" aria-labelledby="site-engineer-title">
+  <div class="container engineer-grid">
+    <div class="engineer-figure" aria-hidden="true">
+      <svg viewBox="0 0 520 420" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0%" stop-color="#dfe7ef"/>
+            <stop offset="100%" stop-color="#c7d4df"/>
+          </linearGradient>
+        </defs>
+        <rect width="520" height="420" fill="url(#sky)"/>
+        <rect y="270" width="520" height="150" fill="#8b8a7a"/>
+        <rect x="38" y="170" width="120" height="105" fill="#b8b09d"/>
+        <rect x="164" y="140" width="118" height="135" fill="#c7b7a2"/>
+        <rect x="292" y="160" width="160" height="115" fill="#b09d83"/>
+        <rect x="120" y="120" width="30" height="150" fill="#6b1f2a" opacity="0.85"/>
+        <rect x="220" y="118" width="36" height="152" fill="#6b1f2a" opacity="0.88"/>
+        <rect x="330" y="124" width="38" height="146" fill="#6b1f2a" opacity="0.88"/>
+        <rect x="345" y="108" width="120" height="18" fill="#d0a12d"/>
+        <rect x="110" y="98" width="100" height="18" fill="#d0a12d"/>
+        <rect x="216" y="92" width="116" height="18" fill="#d0a12d"/>
+        <circle cx="260" cy="146" r="40" fill="#f3d3b2"/>
+        <path d="M232 148 L260 118 L291 148 L282 182 L240 182 Z" fill="#d1a543"/>
+        <rect x="214" y="186" width="92" height="18" rx="8" fill="#f5f1e8"/>
+        <path d="M236 205 L222 258 L252 258 L264 226 L286 258 L314 258 L300 206 Z" fill="#cf3d42"/>
+        <path d="M248 212 L232 260 L270 260 L278 212 Z" fill="#d5cfbf"/>
+        <path d="M270 212 L294 260 L314 260 L288 212 Z" fill="#d5cfbf"/>
+        <rect x="190" y="274" width="120" height="18" rx="8" fill="#d1a543"/>
+        <rect x="242" y="288" width="18" height="58" fill="#4c2c21"/>
+        <rect x="276" y="288" width="18" height="58" fill="#4c2c21"/>
+        <rect x="172" y="318" width="80" height="18" fill="#3d3d3d"/>
+        <rect x="292" y="318" width="82" height="18" fill="#3d3d3d"/>
+        <line x1="80" y1="180" x2="170" y2="90" stroke="#d4a13a" stroke-width="8" stroke-linecap="round"/>
+        <line x1="360" y1="170" x2="475" y2="100" stroke="#d4a13a" stroke-width="8" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="engineer-copy">
+      <p class="eyebrow-none">Meet Your Site Engineer</p>
+      <h2 id="site-engineer-title">Private Building Inspector</h2>
+      <p class="engineer-sub">Quality • Compliance • Safe Buildings.</p>
+      <p>Kevin Oluoch leads our inspection and construction assurance function with a practical, builder-first approach. He checks structural integrity, material quality and compliance so clients can proceed with confidence from foundation to completion.</p>
+      <ul class="engineer-list">
+        <li>Independent site inspections for new builds and existing structures</li>
+        <li>Alignment, positioning and dimensional accuracy checks</li>
+        <li>Construction quality control and material verification</li>
+      </ul>
+      <div class="engineer-cta">
+        <a href="tel:0720144481" class="btn btn-primary">Call 0720144481</a>
+        <a href="tel:0106650270" class="btn btn-outline" style="border-color: var(--maroon); color: var(--maroon);">Call 0106650270</a>
       </div>
-    </footer>
+    </div>
+  </div>
+</section>
 
-    <div class="chatbot-widget" aria-live="polite">
-      <div class="chatbot-panel" hidden>
-        <div class="chatbot-header">
-          <div>
-            <strong>Lamech Digital</strong>
-            <span>Quick questions</span>
-          </div>
-          <button type="button" class="chatbot-close" aria-label="Close chat">×</button>
-        </div>
+<div class="stats-bar" style="border-top:none;">
+  <div class="container stats-grid">
+    <div><div class="num">14+</div><div class="label">Years in operation</div></div>
+    <div><div class="num">120+</div><div class="label">Projects completed</div></div>
+    <div><div class="num">300+</div><div class="label">Site inspections</div></div>
+    <div><div class="num">6</div><div class="label">Certified engineers &amp; inspectors</div></div>
+  </div>
+</div>
 
-        <div class="chatbot-messages">
-          <div class="message bot">
-            Hi! I can help with questions about website design, services, and business-ready online presence. Ask me anything.
-          </div>
-        </div>
-
-        <div class="chatbot-quick-replies">
-          <button type="button" class="quick-reply" data-question="What services do you offer?">What services do you offer?</button>
-          <button type="button" class="quick-reply" data-question="How much does a website cost?">How much does a website cost?</button>
-          <button type="button" class="quick-reply" data-question="How long does it take?">How long does it take?</button>
-          <button type="button" class="quick-reply" data-question="Talk to Lamech directly">Talk to Lamech directly</button>
-        </div>
-
-        <form class="chatbot-form">
-          <input type="text" placeholder="Type your question..." aria-label="Type your question" />
-          <button type="submit">Send</button>
-        </form>
+<!-- ================= SERVICES ================= -->
+<section id="services">
+  <div class="container">
+    <div class="section-head">
+      <h2>What we do</h2>
+      <p>From first drawing to final handover, Homenah covers the full lifecycle of a build.</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="icon"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#6b1f2a" stroke-width="1.6"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></div>
+        <h3>Building Construction</h3>
+        <p>Custom homes, additions, and full residential builds designed around your vision.</p>
       </div>
-
-      <button class="chatbot-toggle" type="button" aria-label="Open chatbot" aria-expanded="false">
-        <span class="chatbot-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M7 17.5L4 20V6.5C4 5.67 4.67 5 5.5 5H18.5C19.33 5 20 5.67 20 6.5V15.5C20 16.33 19.33 17 18.5 17H7Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M8 9.5H16M8 12.5H13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-          </svg>
-        </span>
-        <span class="chatbot-close-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M7 7L17 17M17 7L7 17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-          </svg>
-        </span>
-      </button>
+      <div class="service-card">
+        <div class="icon"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#6b1f2a" stroke-width="1.6"><rect x="4" y="3" width="16" height="18"/><path d="M8 8h2M14 8h2M8 12h2M14 12h2M8 16h2M14 16h2"/></svg></div>
+        <h3>Civil Works</h3>
+        <p>Site preparation, drainage, structural supervision, and build quality assurance.</p>
+      </div>
+      <div class="service-card inspection-card">
+        <div class="icon"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#6b1f2a" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
+        <h3>Site Inspection Services</h3>
+        <ol class="inspection-list">
+          <li><span>1</span> Checking on the building alignment</li>
+          <li><span>2</span> Positioning of the building as per surveyor records</li>
+          <li><span>3</span> Confirmation of dimensions</li>
+          <li><span>4</span> Checking on quality of construction works</li>
+          <li><span>5</span> Preparation of bills of quantities</li>
+          <li><span>6</span> Preparation of architectural drawings</li>
+          <li><span>7</span> Construction materials waste management</li>
+          <li><span>8</span> Materials testing</li>
+          <li><span>9</span> And more services on request</li>
+        </ol>
+      </div>
+      <div class="service-card">
+        <div class="icon"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#6b1f2a" stroke-width="1.6"><path d="M3 21l6-1 11-11-5-5L4 15l-1 6Z"/></svg></div>
+        <h3>Renovations</h3>
+        <p>Structural upgrades, layout changes and finishing work on existing buildings.</p>
+      </div>
     </div>
 
-    <a
-      class="floating-whatsapp"
-      href="https://wa.me/254742038072?text=Hello%20Lamech%20Digital%2C%20I%20would%20like%20to%20discuss%20a%20website%20for%20my%20business."
-      target="_blank"
-      rel="noreferrer"
-      aria-label="Chat on WhatsApp"
-    >
-      <span class="floating-whatsapp-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M19.11 17.27c.94.94 1.43 1.91 1.47 2.97-.47.19-1.31.4-2.18.4a8.31 8.31 0 0 1-8.33-8.29A8.38 8.38 0 0 1 12.07 4.5a8.35 8.35 0 0 1 8.35 8.31c0 1.35-.4 2.58-1.08 3.68l-1.82-1.51a6.1 6.1 0 0 0 .68-1.12A6.78 6.78 0 0 0 12.07 6.3a6.78 6.78 0 0 0-6.28 0 6.79 6.79 0 0 0 0 6.29 6.8 6.8 0 0 0 6.28 0c.92 0 1.32.15 1.75.57.41.4 1.02 1.15 1.69 2.03.62.82 1.45 1.12 2.53 1.12 1.08 0 2.03-.6 2.72-1.5l.35-.51ZM9.98 8.02c-.33.03-.49.17-.64.38-.24.35-.72 1.17-.72 2.72 0 1.54.74 2.88 1.06 3.27.29.36.8.91 1.53.99.74.09 1.52-.11 2.28-.7.79-.62 1.22-.98 1.26-1.72.04-.74-.72-1.41-1.37-1.99-.54-.48-1-.94-1.4-1.64-.22-.38-.48-.62-.9-.7-.41-.08-.64-.04-.98.19Z" fill="currentColor"/>
-        </svg>
-      </span>
-    </a>
+    <div class="inspection-gallery" aria-label="Inspection service highlights">
+      <div class="inspection-tile">
+        <div class="inspection-photo inspection-photo-1"></div>
+        <div class="inspection-caption">Building Alignment &amp; Positioning</div>
+      </div>
+      <div class="inspection-tile">
+        <div class="inspection-photo inspection-photo-2"></div>
+        <div class="inspection-caption">Dimension Checks</div>
+      </div>
+      <div class="inspection-tile">
+        <div class="inspection-photo inspection-photo-3"></div>
+        <div class="inspection-caption">Architectural Drawings &amp; BOQ Preparation</div>
+      </div>
+      <div class="inspection-tile">
+        <div class="inspection-photo inspection-photo-4"></div>
+        <div class="inspection-caption">Materials Testing &amp; Quality Control</div>
+      </div>
+    </div>
 
-    <script src="script.js"></script>
-  </body>
+    <div class="inspection-banner">
+      <div class="inspection-banner-text">Your Building, Our Priority — Accurate | Reliable | Professional</div>
+      <div class="inspection-banner-actions">
+        <a href="tel:0720144481" class="btn btn-gold">0720144481</a>
+        <a href="tel:0106650270" class="btn btn-outline" style="border-color: rgba(247,243,236,0.75); color: var(--cream);">0106650270</a>
+        <a href="#contact" class="btn btn-primary">Contact Me Today</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DESIGN & STRUCTURAL ================= -->
+<section id="design">
+  <div class="container">
+    <div class="section-head">
+      <h2>Architectural &amp; structural design</h2>
+      <p>Every Homenah project is grounded in proper design work before a single block is laid — from spatial planning to load calculations.</p>
+    </div>
+
+    <!-- Architectural design -->
+    <div class="design-block">
+      <div class="design-copy">
+        <h3>Architectural design</h3>
+        <p class="desc">We translate a client's brief into buildable drawings — floor plans, elevations and sections — checked against local planning requirements before submission.</p>
+        <ul>
+          <li>Space planning and layout options</li>
+          <li>Elevations and exterior massing studies</li>
+          <li>Working drawings for approval and construction</li>
+          <li>Planning permission documentation</li>
+        </ul>
+      </div>
+      <div class="design-figure">
+        <svg viewBox="0 0 420 260" xmlns="http://www.w3.org/2000/svg">
+          <rect x="15" y="15" width="390" height="230" fill="none" stroke="#2b2320" stroke-width="1.4"/>
+          <line x1="15" y1="130" x2="405" y2="130" stroke="#2b2320" stroke-width="1"/>
+          <line x1="180" y1="15" x2="180" y2="130" stroke="#2b2320" stroke-width="1"/>
+          <line x1="290" y1="15" x2="290" y2="245" stroke="#2b2320" stroke-width="1"/>
+          <line x1="180" y1="185" x2="290" y2="185" stroke="#2b2320" stroke-width="1"/>
+          <rect x="60" y="120" width="30" height="10" fill="#c9a227"/>
+          <rect x="330" y="20" width="10" height="30" fill="#c9a227"/>
+          <text x="30" y="80" font-size="10.5" fill="#2b2320" font-family="Inter, sans-serif">LOUNGE</text>
+          <text x="195" y="80" font-size="10.5" fill="#2b2320" font-family="Inter, sans-serif">DINING</text>
+          <text x="305" y="80" font-size="10.5" fill="#2b2320" font-family="Inter, sans-serif">BEDROOM 1</text>
+          <text x="30" y="195" font-size="10.5" fill="#2b2320" font-family="Inter, sans-serif">BEDROOM 2</text>
+          <text x="195" y="215" font-size="10.5" fill="#2b2320" font-family="Inter, sans-serif">BATH</text>
+          <text x="305" y="215" font-size="10.5" fill="#2b2320" font-family="Inter, sans-serif">BEDROOM 3</text>
+          <line x1="15" y1="8" x2="405" y2="8" stroke="#6b1f2a" stroke-width="0.75"/>
+          <text x="190" y="6" font-size="9" fill="#6b1f2a" font-family="Inter, sans-serif">15.6 m</text>
+        </svg>
+        <div class="figure-caption">Ground floor plan — sample residential layout</div>
+      </div>
+    </div>
+
+    <!-- Structural engineering -->
+    <div class="design-block reverse">
+      <div class="design-copy">
+        <h3>Structural engineering</h3>
+        <p class="desc">Load paths, foundations and framing are calculated before construction begins, so the building performs the way the drawings say it will.</p>
+        <ul>
+          <li>Load calculations for roofs, floors and walls</li>
+          <li>Foundation design for varying soil conditions</li>
+          <li>Reinforced concrete, structural steel and timber framing</li>
+          <li>Retrofit and reinforcement of existing structures</li>
+        </ul>
+      </div>
+      <div class="design-figure">
+        <svg viewBox="0 0 420 240" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="30,220 210,40 390,220" fill="none" stroke="#2b2320" stroke-width="1.6"/>
+          <line x1="30" y1="220" x2="390" y2="220" stroke="#2b2320" stroke-width="1.6"/>
+          <line x1="90" y1="220" x2="170" y2="90" stroke="#2b2320" stroke-width="1"/>
+          <line x1="330" y1="220" x2="250" y2="90" stroke="#2b2320" stroke-width="1"/>
+          <line x1="210" y1="40" x2="210" y2="220" stroke="#c9a227" stroke-width="1"/>
+          <line x1="120" y1="150" x2="300" y2="150" stroke="#2b2320" stroke-width="1"/>
+          <text x="195" y="35" font-size="10" fill="#6b1f2a" font-family="Inter, sans-serif">RIDGE</text>
+          <text x="10" y="235" font-size="9" fill="#2b2320" font-family="Inter, sans-serif">A</text>
+          <text x="392" y="235" font-size="9" fill="#2b2320" font-family="Inter, sans-serif">B</text>
+        </svg>
+        <div class="figure-caption">Roof truss configuration — standard span diagram</div>
+      </div>
+    </div>
+
+    <!-- MEP -->
+    <div class="design-block">
+      <div class="design-copy">
+        <h3>MEP &amp; services integration</h3>
+        <p class="desc">Mechanical, electrical and plumbing runs are planned alongside the structure so services don't fight the building later.</p>
+        <ul>
+          <li>Electrical layout and load distribution</li>
+          <li>Plumbing and drainage routing</li>
+          <li>Ventilation and drainage coordination with structural elements</li>
+        </ul>
+      </div>
+      <div class="design-figure">
+        <svg viewBox="0 0 420 220" xmlns="http://www.w3.org/2000/svg">
+          <rect x="20" y="20" width="380" height="180" fill="none" stroke="#2b2320" stroke-width="1.2"/>
+          <path d="M40 40 H200 V100 H360" fill="none" stroke="#6b1f2a" stroke-width="2"/>
+          <path d="M40 180 H150 V120 H360" fill="none" stroke="#c9a227" stroke-width="2"/>
+          <circle cx="40" cy="40" r="4" fill="#6b1f2a"/>
+          <circle cx="360" cy="100" r="4" fill="#6b1f2a"/>
+          <circle cx="40" cy="180" r="4" fill="#c9a227"/>
+          <circle cx="360" cy="120" r="4" fill="#c9a227"/>
+          <text x="30" y="60" font-size="9.5" fill="#6b1f2a" font-family="Inter, sans-serif">Electrical run</text>
+          <text x="30" y="200" font-size="9.5" fill="#b8961f" font-family="Inter, sans-serif">Plumbing run</text>
+        </svg>
+        <div class="figure-caption">Services routing — schematic overlay</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CAPABILITIES ================= -->
+<div id="why-us" aria-hidden="true"></div>
+<section id="capabilities">
+  <div class="container">
+    <div class="section-head">
+      <h2>Technical capabilities</h2>
+      <p>A summary of the materials, spans and standards we design and build to. Figures are indicative — every project gets its own calculations.</p>
+    </div>
+    <div class="specs-wrap">
+      <table class="specs">
+        <tbody>
+          <tr><th>Foundation types</th><td>Strip footing, raft, and pile foundations, selected by soil investigation</td></tr>
+          <tr><th>Structural materials</th><td>Reinforced concrete, structural steel framing, engineered timber</td></tr>
+          <tr><th>Typical roof span</th><td>Up to 9 m clear span with standard timber trussing; greater spans with steel</td></tr>
+          <tr><th>Wall systems</th><td>Load-bearing masonry, block-and-frame, and lightweight partition systems</td></tr>
+          <tr><th>Inspection scope</th><td>Foundations, structural frame, roofing, drainage, and finishes</td></tr>
+          <tr><th>Compliance</th><td>Local county building codes and National Construction Authority requirements</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROCESS ================= -->
+<section id="process">
+  <div class="container">
+    <div class="section-head">
+      <h2>How a project runs</h2>
+      <p>The same sequence, every time — so you always know what stage you're at.</p>
+    </div>
+    <div class="process-list">
+      <div class="process-item"><div class="step-num"></div><div><h4>Consultation</h4><p>We walk the site or review the brief and agree scope, budget range and timeline.</p></div></div>
+      <div class="process-item"><div class="step-num"></div><div><h4>Concept design</h4><p>Initial layouts and elevations for your review before anything is finalised.</p></div></div>
+      <div class="process-item"><div class="step-num"></div><div><h4>Structural analysis &amp; permitting</h4><p>Engineering calculations are completed and drawings submitted for approval.</p></div></div>
+      <div class="process-item"><div class="step-num"></div><div><h4>Construction</h4><p>Site work proceeds in stages, each one signed off before the next begins.</p></div></div>
+      <div class="process-item"><div class="step-num"></div><div><h4>Inspection &amp; quality control</h4><p>Independent checks against the approved drawings and building code.</p></div></div>
+      <div class="process-item"><div class="step-num"></div><div><h4>Handover &amp; warranty</h4><p>Final walkthrough, documentation, and workmanship warranty period begins.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section id="projects">
+  <div class="container">
+    <div class="section-head">
+      <h2>Recent projects</h2>
+      <p>A sample of completed work. Swap the placeholders below for real project photos.</p>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-thumb">images/residential.jpg</div>
+        <div class="project-body"><span class="tag">RESIDENTIAL</span><h4>Two-storey family home</h4><p>Full design and build, 4-bedroom residence.</p></div>
+      </div>
+      <div class="project-card">
+        <div class="project-thumb">images/commercial.jpg</div>
+        <div class="project-body"><span class="tag">COMMERCIAL</span><h4>Retail &amp; office block</h4><p>Mixed-use commercial building, ground-plus-two.</p></div>
+      </div>
+      <div class="project-card">
+        <div class="project-thumb">images/inspection.jpg</div>
+        <div class="project-body"><span class="tag">INSPECTION</span><h4>Pre-purchase structural survey</h4><p>Independent inspection ahead of a property sale.</p></div>
+      </div>
+      <div class="project-card">
+        <div class="project-thumb">images/renovation.jpg</div>
+        <div class="project-body"><span class="tag">RENOVATION</span><h4>Structural reinforcement</h4><p>Load-bearing wall removal with steel beam retrofit.</p></div>
+      </div>
+      <div class="project-card">
+        <div class="project-thumb">images/site-plan.jpg</div>
+        <div class="project-body"><span class="tag">DESIGN</span><h4>Site &amp; layout planning</h4><p>Subdivision layout and access road design.</p></div>
+      </div>
+      <div class="project-card">
+        <div class="project-thumb">images/foundation.jpg</div>
+        <div class="project-body"><span class="tag">STRUCTURAL</span><h4>Raft foundation, sloped site</h4><p>Foundation design for a challenging site gradient.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section id="testimonials">
+  <div class="container">
+    <div class="section-head">
+      <h2>What clients say</h2>
+      <p>&nbsp;</p>
+    </div>
+    <div class="testi-wrap">
+      <div class="testi-slide active">
+        <p class="quote">Homenah caught a foundation issue our previous contractor missed. Their inspection report was clear enough that we knew exactly what to fix.</p>
+        <div class="who">— Property buyer, pre-purchase inspection</div>
+      </div>
+      <div class="testi-slide">
+        <p class="quote">The structural drawings for our extension were approved on the first submission. No back-and-forth with the county office.</p>
+        <div class="who">— Residential extension client</div>
+      </div>
+      <div class="testi-slide">
+        <p class="quote">Clear timelines, and they stuck to them. Our retail unit was handed over on the date we were given at the start.</p>
+        <div class="who">— Commercial client</div>
+      </div>
+      <div class="testi-dots" role="tablist" aria-label="Testimonials"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TEAM ================= -->
+<section id="team">
+  <div class="container">
+    <div class="section-head">
+      <h2>Who you'll work with</h2>
+      <p>A small, hands-on team across design, engineering and site supervision.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-photo">Photo</div>
+        <h4>Kevin Oluoch</h4>
+        <div class="role">Founder &amp; Site Lead</div>
+        <p class="bio">Oversees every project from initial site visit through to handover.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-photo">Photo</div>
+        <h4>Structural Engineer</h4>
+        <div class="role">Design &amp; Calculations</div>
+        <p class="bio">Handles load calculations, foundation design and permit drawings.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-photo">Photo</div>
+        <h4>Site Inspector</h4>
+        <div class="role">Quality &amp; Compliance</div>
+        <p class="bio">Conducts independent inspections against approved drawings and code.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section id="faq">
+  <div class="container">
+    <div class="section-head">
+      <h2>Frequently asked questions</h2>
+      <p>&nbsp;</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">How long does a typical inspection take? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Most residential inspections take half a day on site, with the written report delivered within 3–5 working days.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do you handle planning permission? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Yes — we prepare and submit the required architectural and structural drawings to the relevant county office.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Can you work from an existing architect's drawings? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Yes, we can take on structural design and construction from drawings prepared elsewhere.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What areas do you cover? <span class="plus">+</span></button>
+        <div class="faq-a"><p>We work across the region from our base, and can travel further for larger commercial or inspection projects.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Is there a warranty on completed work? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Yes, all construction work includes a workmanship warranty period, detailed at handover.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact">
+  <div class="container">
+    <div class="section-head">
+      <h2>Get in touch</h2>
+      <p>Tell us about your project and we'll get back to you with next steps.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Homenah Building Contractors</h3>
+        <ul>
+          <li><strong>Phone</strong> 0720144481 / 0106650270</li>
+          <li><strong>Email</strong> info@homenahbuildingcontractors.com</li>
+          <li><strong>Office hours</strong> Monday – Saturday, 8:00 – 17:00</li>
+        </ul>
+      </div>
+      <form id="contact-form" novalidate>
+        <div class="form-field">
+          <label for="c-name">Full name</label>
+          <input type="text" id="c-name" required />
+        </div>
+        <div class="form-field">
+          <label for="c-email">Email address</label>
+          <input type="email" id="c-email" required />
+        </div>
+        <div class="form-field">
+          <label for="c-message">Project details</label>
+          <textarea id="c-message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+        <div class="form-note" id="contact-note">Thanks — we'll be in touch shortly.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <h5>Homenah Building Contractors</h5>
+      <p>Residential and commercial construction, structural design, and independent site inspections.</p>
+    </div>
+    <div>
+      <h5>Company</h5>
+      <ul><li><a href="#services">Services</a></li><li><a href="#team">Team</a></li><li><a href="#faq">FAQ</a></li></ul>
+    </div>
+    <div>
+      <h5>Work</h5>
+      <ul><li><a href="#design">Design &amp; Structural</a></li><li><a href="#projects">Projects</a></li><li><a href="#process">Process</a></li></ul>
+    </div>
+    <div>
+      <h5>Account</h5>
+      <ul><li><a href="login.html">Client Login</a></li><li><a href="#contact">Contact</a></li></ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>&copy; <span id="year"></span> Homenah Building Contractors. Kevin Oluoch.</span>
+    <span>Built by Lamech Digital</span>
+  </div>
+</footer>
+
+<!-- ================= CHATBOT WIDGET (markup kept consistent with existing script.js hooks) ================= -->
+<button class="chatbot-launcher" id="chatbot-launcher" aria-label="Open chat">&#128172;</button>
+
+<div class="chatbot-window" id="chatbot-window">
+  <div class="chatbot-header">
+    <span>Homenah Assistant</span>
+    <button id="chatbot-close" aria-label="Close chat">&times;</button>
+  </div>
+
+  <div class="chatbot-body">
+    <div class="message bot-message">Hi! How can I help with your project today?</div>
+
+    <div class="message typing hidden">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="quick-replies">
+      <button type="button" class="quick-reply" data-reply="quote">Get a quote</button>
+      <button type="button" class="quick-reply" data-reply="inspection">Book an inspection</button>
+      <button type="button" class="quick-reply" data-reply="services">View services</button>
+      <button type="button" class="quick-reply" data-reply="contact">Talk to Kevin</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Mobile nav toggle
+  document.getElementById('nav-toggle').addEventListener('click', () => {
+    const nav = document.querySelector('nav.main-links');
+    const visible = nav.style.display === 'flex';
+    nav.style.display = visible ? 'none' : 'flex';
+    nav.style.flexDirection = 'column';
+    nav.style.position = 'absolute';
+    nav.style.top = '64px';
+    nav.style.right = '28px';
+    nav.style.background = 'var(--cream)';
+    nav.style.border = '1px solid var(--line)';
+    nav.style.padding = '16px 24px';
+  });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.querySelector('.faq-q').addEventListener('click', () => {
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+      if (!wasOpen) item.classList.add('open');
+    });
+  });
+
+  // Testimonial rotation
+  const slides = document.querySelectorAll('.testi-slide');
+  const dotsWrap = document.querySelector('.testi-dots');
+  let current = 0;
+
+  slides.forEach((_, i) => {
+    const dot = document.createElement('button');
+    if (i === 0) dot.classList.add('active');
+    dot.setAttribute('aria-label', `Show testimonial ${i + 1}`);
+    dot.addEventListener('click', () => showSlide(i));
+    dotsWrap.appendChild(dot);
+  });
+
+  function showSlide(index) {
+    slides[current].classList.remove('active');
+    dotsWrap.children[current].classList.remove('active');
+    current = index;
+    slides[current].classList.add('active');
+    dotsWrap.children[current].classList.add('active');
+  }
+
+  setInterval(() => {
+    showSlide((current + 1) % slides.length);
+  }, 6000);
+
+  // Contact form (front-end only — wire to your backend / form service)
+  document.getElementById('contact-form').addEventListener('submit', e => {
+    e.preventDefault();
+    document.getElementById('contact-note').classList.add('show');
+    e.target.reset();
+  });
+
+  // Reveal section headings on scroll — one deliberate effect, used consistently
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('in-view');
+    });
+  }, { threshold: 0.2 });
+  document.querySelectorAll('.section-head').forEach(el => observer.observe(el));
+
+  // Chatbot widget open/close + quick replies
+  const launcher = document.getElementById('chatbot-launcher');
+  const chatWindow = document.getElementById('chatbot-window');
+  const closeBtn = document.getElementById('chatbot-close');
+  const chatBody = document.querySelector('.chatbot-body');
+  const typingIndicator = document.querySelector('.message.typing');
+
+  launcher.addEventListener('click', () => chatWindow.classList.add('open'));
+  closeBtn.addEventListener('click', () => chatWindow.classList.remove('open'));
+
+  const replyText = {
+    quote: "Great — tell us the project type and rough size, and we'll follow up with a quote.",
+    inspection: "We can schedule a site inspection this week — what's the property address?",
+    services: "We handle residential and commercial builds, site inspections, structural design, and renovations.",
+    contact: "You can reach Kevin directly via the contact form below, or by phone during office hours."
+  };
+
+  document.querySelectorAll('.quick-reply').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const userMsg = document.createElement('div');
+      userMsg.className = 'message user-message';
+      userMsg.textContent = btn.textContent;
+      chatBody.insertBefore(userMsg, typingIndicator);
+
+      typingIndicator.classList.remove('hidden');
+      chatBody.scrollTop = chatBody.scrollHeight;
+
+      setTimeout(() => {
+        typingIndicator.classList.add('hidden');
+        const botMsg = document.createElement('div');
+        botMsg.className = 'message bot-message';
+        botMsg.textContent = replyText[btn.dataset.reply] || "Thanks — someone from our team will follow up.";
+        chatBody.insertBefore(botMsg, typingIndicator);
+        chatBody.scrollTop = chatBody.scrollHeight;
+      }, 900);
+    });
+  });
+</script>
+
+<script src="script.js"></script>
+</body>
 </html>

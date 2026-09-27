@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/32700598/README.md)
 # Homenah Building Contractors
 
 A website for **Homenah Building Contractors**, a building inspection and construction assurance business.

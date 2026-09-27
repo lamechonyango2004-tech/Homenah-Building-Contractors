@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sign In — Homenah Building Contractors</title>
+<meta name="description" content="Sign in or create an account with Homenah Building Contractors — building inspections, renovations, commercial and residential work." />
+
+<style>
+  :root {
+    --maroon: #6b1f2a;
+    --maroon-dark: #4c151d;
+    --gold: #c9a227;
+    --gold-light: #e6c65c;
+    --cream: #f7f3ec;
+    --charcoal: #2b2320;
+    --line: #d8cdbb;
+    --error: #a13d2b;
+    --success: #4b7a51;
+    --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: var(--font-body);
+    color: var(--charcoal);
+    background: var(--cream);
+    min-height: 100vh;
+  }
+
+  a { color: var(--maroon); }
+
+  /* ---------- Layout: split screen ---------- */
+  .wrap {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    min-height: 100vh;
+  }
+
+  @media (max-width: 880px) {
+    .wrap { grid-template-columns: 1fr; }
+    .brand-panel { min-height: 240px; }
+  }
+
+  /* ---------- Left: brand panel ---------- */
+  .brand-panel {
+    background: var(--maroon);
+    background-image:
+      repeating-linear-gradient(135deg, rgba(255,255,255,0.035) 0 2px, transparent 2px 26px);
+    color: var(--cream);
+    padding: 56px 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .brand-mark {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brand-mark .square {
+    width: 34px;
+    height: 34px;
+    background: var(--gold);
+    border: 2px solid var(--cream);
+    transform: rotate(45deg);
+    flex-shrink: 0;
+  }
+
+  .brand-mark span {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    letter-spacing: 0.02em;
+  }
+
+  .brand-copy h1 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+    line-height: 1.15;
+    margin: 0 0 18px;
+    max-width: 12ch;
+  }
+
+  .brand-copy p {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 34ch;
+    color: rgba(247,243,236,0.85);
+    margin: 0;
+  }
+
+  .brand-list {
+    list-style: none;
+    padding: 0;
+    margin: 28px 0 0;
+    display: grid;
+    gap: 10px;
+    font-size: 0.92rem;
+    color: rgba(247,243,236,0.85);
+  }
+
+  .brand-list li { display: flex; align-items: center; gap: 10px; }
+  .brand-list li::before {
+    content: "";
+    width: 6px; height: 6px;
+    background: var(--gold);
+  }
+
+  .brand-foot {
+    font-size: 0.82rem;
+    color: rgba(247,243,236,0.6);
+  }
+
+  /* ---------- Right: form panel ---------- */
+  .form-panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 24px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .tabs {
+    display: flex;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 28px;
+  }
+
+  .tab {
+    flex: 1;
+    background: none;
+    border: none;
+    padding: 12px 4px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #8a7f70;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+  }
+
+  .tab[aria-selected="true"] {
+    color: var(--maroon);
+    border-bottom-color: var(--gold);
+  }
+
+  .tab:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  a:focus-visible {
+    outline: 2px solid var(--maroon);
+    outline-offset: 2px;
+  }
+
+  h2.form-title {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    margin: 0 0 6px;
+  }
+
+  .form-sub {
+    font-size: 0.9rem;
+    color: #6b6156;
+    margin: 0 0 24px;
+  }
+
+  .field { margin-bottom: 18px; }
+
+  .field label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .field .hint {
+    font-size: 0.78rem;
+    color: #857a6c;
+    font-weight: 400;
+    margin-left: 4px;
+  }
+
+  .input-row {
+    position: relative;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 11px 12px;
+    font-size: 0.95rem;
+    font-family: var(--font-body);
+    border: 1px solid var(--line);
+    background: #fff;
+    color: var(--charcoal);
+  }
+
+  input.invalid { border-color: var(--error); }
+
+  .toggle-pw {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 0.78rem;
+    color: var(--maroon);
+    cursor: pointer;
+    padding: 4px 6px;
+    font-weight: 600;
+  }
+
+  .field-error {
+    display: none;
+    color: var(--error);
+    font-size: 0.78rem;
+    margin-top: 5px;
+  }
+
+  .field-error.show { display: block; }
+
+  /* Strength meter */
+  .strength {
+    display: flex;
+    gap: 4px;
+    margin-top: 8px;
+  }
+  .strength i {
+    height: 4px;
+    flex: 1;
+    background: var(--line);
+    display: block;
+  }
+  .strength[data-level="1"] i:nth-child(1) { background: var(--error); }
+  .strength[data-level="2"] i:nth-child(-n+2) { background: #c98527; }
+  .strength[data-level="3"] i:nth-child(-n+3) { background: var(--gold); }
+  .strength[data-level="4"] i { background: var(--success); }
+  .strength-label {
+    font-size: 0.75rem;
+    color: #857a6c;
+    margin-top: 4px;
+  }
+
+  .row-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: -4px 0 20px;
+    font-size: 0.85rem;
+  }
+
+  .remember {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #6b6156;
+  }
+
+  .forgot-link {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 0.85rem;
+    color: var(--maroon);
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  button.submit {
+    width: 100%;
+    padding: 13px;
+    background: var(--maroon);
+    color: var(--cream);
+    border: none;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background 0.15s ease;
+  }
+
+  button.submit:hover { background: var(--maroon-dark); }
+  button.submit:disabled { background: #9c8a86; cursor: not-allowed; }
+
+  .spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(247,243,236,0.4);
+    border-top-color: var(--cream);
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+    display: none;
+  }
+
+  button.submit.loading .spinner { display: inline-block; }
+  button.submit.loading .btn-label { opacity: 0.85; }
+
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .status {
+    margin-top: 18px;
+    padding: 11px 14px;
+    font-size: 0.85rem;
+    border: 1px solid transparent;
+    display: none;
+  }
+
+  .status.show { display: block; }
+  .status.error { background: #fbeae6; border-color: var(--error); color: var(--error); }
+  .status.success { background: #eaf2eb; border-color: var(--success); color: var(--success); }
+  .status.info { background: #f1eee6; border-color: var(--line); color: var(--charcoal); }
+
+  .divider {
+    text-align: center;
+    color: #a89c8c;
+    font-size: 0.78rem;
+    margin: 8px 0 4px;
+  }
+
+  /* ---------- Forgot password panel (inline, not a modal) ---------- */
+  .reset-panel { display: none; }
+  .reset-panel.show { display: block; }
+  .back-link {
+    background: none; border: none; color: var(--maroon);
+    font-size: 0.85rem; cursor: pointer; padding: 0; margin-bottom: 18px;
+    text-decoration: underline;
+  }
+
+  .sr-only {
+    position: absolute; width: 1px; height: 1px;
+    padding: 0; margin: -1px; overflow: hidden;
+    clip: rect(0,0,0,0); border: 0;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .spinner { animation: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- Brand / hero panel -->
+  <div class="brand-panel">
+    <div class="brand-mark">
+      <span class="square" aria-hidden="true"></span>
+      <span>Homenah Building Contractors</span>
+    </div>
+
+    <div class="brand-copy">
+      <h1>Built on inspection, backed by experience.</h1>
+      <p>Sign in to track your project status, view inspection reports, and message your site team directly.</p>
+      <ul class="brand-list">
+        <li>Residential &amp; commercial builds</li>
+        <li>Independent site inspections</li>
+        <li>Renovations, start to finish</li>
+      </ul>
+    </div>
+
+    <div class="brand-foot">&copy; <span id="year"></span> Homenah Building Contractors. Kevin Oluoch.</div>
+  </div>
+
+  <!-- Form panel -->
+  <div class="form-panel">
+    <div class="card">
+
+      <!-- Auth tabs -->
+      <div class="tabs" role="tablist" aria-label="Choose sign in or sign up">
+        <button class="tab" id="tab-login" role="tab" aria-selected="true" aria-controls="panel-login">Log In</button>
+        <button class="tab" id="tab-signup" role="tab" aria-selected="false" aria-controls="panel-signup">Sign Up</button>
+      </div>
+
+      <!-- LOGIN -->
+      <div id="panel-login" role="tabpanel" aria-labelledby="tab-login">
+        <h2 class="form-title">Welcome back</h2>
+        <p class="form-sub">Log in to your Homenah account.</p>
+
+        <form id="login-form" novalidate>
+          <div class="field">
+            <label for="login-email">Email address</label>
+            <input type="email" id="login-email" name="email" autocomplete="email" required />
+            <div class="field-error" id="login-email-error">Enter a valid email address.</div>
+          </div>
+
+          <div class="field">
+            <label for="login-password">Password</label>
+            <div class="input-row">
+              <input type="password" id="login-password" name="password" autocomplete="current-password" required />
+              <button type="button" class="toggle-pw" data-target="login-password" aria-label="Show password">Show</button>
+            </div>
+            <div class="field-error" id="login-password-error">Password is required.</div>
+          </div>
+
+          <div class="row-between">
+            <label class="remember">
+              <input type="checkbox" id="remember-me" />
+              Remember me
+            </label>
+            <button type="button" class="forgot-link" id="show-reset">Forgot password?</button>
+          </div>
+
+          <button type="submit" class="submit" id="login-submit">
+            <span class="spinner" aria-hidden="true"></span>
+            <span class="btn-label">Log In</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- SIGN UP -->
+      <div id="panel-signup" role="tabpanel" aria-labelledby="tab-signup" hidden>
+        <h2 class="form-title">Create your account</h2>
+        <p class="form-sub">Get updates on your project the moment they happen.</p>
+
+        <form id="signup-form" novalidate>
+          <div class="field">
+            <label for="signup-name">Full name</label>
+            <input type="text" id="signup-name" name="name" autocomplete="name" required />
+            <div class="field-error" id="signup-name-error">Enter your name.</div>
+          </div>
+
+          <div class="field">
+            <label for="signup-email">Email address</label>
+            <input type="email" id="signup-email" name="email" autocomplete="email" required />
+            <div class="field-error" id="signup-email-error">Enter a valid email address.</div>
+          </div>
+
+          <div class="field">
+            <label for="signup-password">Password <span class="hint">(min. 8 characters)</span></label>
+            <div class="input-row">
+              <input type="password" id="signup-password" name="password" autocomplete="new-password" minlength="8" required />
+              <button type="button" class="toggle-pw" data-target="signup-password" aria-label="Show password">Show</button>
+            </div>
+            <div class="strength" id="strength-meter" data-level="0" aria-hidden="true">
+              <i></i><i></i><i></i><i></i>
+            </div>
+            <div class="strength-label" id="strength-label">&nbsp;</div>
+            <div class="field-error" id="signup-password-error">Password must be at least 8 characters.</div>
+          </div>
+
+          <div class="field">
+            <label for="signup-confirm">Confirm password</label>
+            <input type="password" id="signup-confirm" name="confirm" autocomplete="new-password" required />
+            <div class="field-error" id="signup-confirm-error">Passwords don't match.</div>
+          </div>
+
+          <button type="submit" class="submit" id="signup-submit">
+            <span class="spinner" aria-hidden="true"></span>
+            <span class="btn-label">Create Account</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- FORGOT PASSWORD -->
+      <div id="panel-reset" class="reset-panel">
+        <button type="button" class="back-link" id="back-to-login">&larr; Back to log in</button>
+        <h2 class="form-title">Reset your password</h2>
+        <p class="form-sub">We'll email you a link to set a new password.</p>
+
+        <form id="reset-form" novalidate>
+          <div class="field">
+            <label for="reset-email">Email address</label>
+            <input type="email" id="reset-email" name="email" autocomplete="email" required />
+            <div class="field-error" id="reset-email-error">Enter a valid email address.</div>
+          </div>
+
+          <button type="submit" class="submit" id="reset-submit">
+            <span class="spinner" aria-hidden="true"></span>
+            <span class="btn-label">Send Reset Link</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Live status region (errors / success) -->
+      <div class="status" id="status-box" role="status" aria-live="polite"></div>
+
+    </div>
+  </div>
+</div>
+
+<script type="module">
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // -----------------------------------------------------------
+  // Netlify Identity — using the standard widget script.
+  // If your existing script.js already loads @netlify/identity
+  // via esm.sh, keep that one and drop this <script> block;
+  // don't run two identity clients on the same page.
+  // -----------------------------------------------------------
+  const identityScript = document.createElement('script');
+  identityScript.src = 'https://identity.netlify.com/v1/netlify-identity-widget.js';
+  document.head.appendChild(identityScript);
+
+  const statusBox = document.getElementById('status-box');
+
+  function showStatus(message, type = 'info') {
+    statusBox.textContent = message;
+    statusBox.className = `status show ${type}`;
+  }
+
+  function clearStatus() {
+    statusBox.className = 'status';
+    statusBox.textContent = '';
+  }
+
+  function setLoading(button, isLoading) {
+    button.classList.toggle('loading', isLoading);
+    button.disabled = isLoading;
+  }
+
+  function goToSite() {
+    window.location.href = 'index.html';
+  }
+
+  // -----------------------------------------------------------
+  // Tab switching
+  // -----------------------------------------------------------
+  const tabLogin = document.getElementById('tab-login');
+  const tabSignup = document.getElementById('tab-signup');
+  const panelLogin = document.getElementById('panel-login');
+  const panelSignup = document.getElementById('panel-signup');
+  const panelReset = document.getElementById('panel-reset');
+
+  function activateTab(which) {
+    const loginActive = which === 'login';
+    tabLogin.setAttribute('aria-selected', String(loginActive));
+    tabSignup.setAttribute('aria-selected', String(!loginActive));
+    panelLogin.hidden = !loginActive;
+    panelSignup.hidden = loginActive;
+    panelReset.classList.remove('show');
+    clearStatus();
+  }
+
+  tabLogin.addEventListener('click', () => activateTab('login'));
+  tabSignup.addEventListener('click', () => activateTab('signup'));
+
+  document.getElementById('show-reset').addEventListener('click', () => {
+    panelLogin.hidden = true;
+    panelSignup.hidden = true;
+    panelReset.classList.add('show');
+    clearStatus();
+  });
+
+  document.getElementById('back-to-login').addEventListener('click', () => {
+    panelReset.classList.remove('show');
+    activateTab('login');
+  });
+
+  // -----------------------------------------------------------
+  // Show / hide password
+  // -----------------------------------------------------------
+  document.querySelectorAll('.toggle-pw').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = document.getElementById(btn.dataset.target);
+      const showing = target.type === 'text';
+      target.type = showing ? 'password' : 'text';
+      btn.textContent = showing ? 'Show' : 'Hide';
+      btn.setAttribute('aria-label', showing ? 'Show password' : 'Hide password');
+    });
+  });
+
+  // -----------------------------------------------------------
+  // Password strength meter (signup only)
+  // -----------------------------------------------------------
+  const pwInput = document.getElementById('signup-password');
+  const strengthMeter = document.getElementById('strength-meter');
+  const strengthLabel = document.getElementById('strength-label');
+  const labels = ['Too short', 'Weak', 'Okay', 'Good', 'Strong'];
+
+  pwInput.addEventListener('input', () => {
+    const val = pwInput.value;
+    let score = 0;
+    if (val.length >= 8) score++;
+    if (/[A-Z]/.test(val) && /[a-z]/.test(val)) score++;
+    if (/\d/.test(val)) score++;
+    if (/[^A-Za-z0-9]/.test(val)) score++;
+    strengthMeter.dataset.level = val.length === 0 ? 0 : score;
+    strengthLabel.textContent = val.length === 0 ? '\u00A0' : labels[score];
+  });
+
+  // -----------------------------------------------------------
+  // Simple validation helpers
+  // -----------------------------------------------------------
+  function isEmail(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
+
+  function setFieldError(inputId, errorId, hasError) {
+    document.getElementById(inputId).classList.toggle('invalid', hasError);
+    document.getElementById(errorId).classList.toggle('show', hasError);
+  }
+
+  // -----------------------------------------------------------
+  // Login form
+  // -----------------------------------------------------------
+  document.getElementById('login-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    clearStatus();
+
+    const email = document.getElementById('login-email').value.trim();
+    const password = document.getElementById('login-password').value;
+
+    const emailValid = isEmail(email);
+    const pwValid = password.length > 0;
+    setFieldError('login-email', 'login-email-error', !emailValid);
+    setFieldError('login-password', 'login-password-error', !pwValid);
+    if (!emailValid || !pwValid) return;
+
+    const btn = document.getElementById('login-submit');
+    setLoading(btn, true);
+
+    window.netlifyIdentity.gotrue.login(email, password, document.getElementById('remember-me').checked)
+      .then(() => {
+        showStatus('Welcome back — redirecting…', 'success');
+        setTimeout(goToSite, 700);
+      })
+      .catch(err => {
+        setLoading(btn, false);
+        const msg = /invalid/i.test(err.message)
+          ? 'Incorrect email or password.'
+          : /network/i.test(err.message)
+            ? 'Network error — check your connection and try again.'
+            : 'Could not log in. Please try again.';
+        showStatus(msg, 'error');
+      });
+  });
+
+  // -----------------------------------------------------------
+  // Signup form
+  // -----------------------------------------------------------
+  document.getElementById('signup-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    clearStatus();
+
+    const name = document.getElementById('signup-name').value.trim();
+    const email = document.getElementById('signup-email').value.trim();
+    const password = document.getElementById('signup-password').value;
+    const confirm = document.getElementById('signup-confirm').value;
+
+    const nameValid = name.length > 0;
+    const emailValid = isEmail(email);
+    const pwValid = password.length >= 8;
+    const confirmValid = password === confirm && confirm.length > 0;
+
+    setFieldError('signup-name', 'signup-name-error', !nameValid);
+    setFieldError('signup-email', 'signup-email-error', !emailValid);
+    setFieldError('signup-password', 'signup-password-error', !pwValid);
+    setFieldError('signup-confirm', 'signup-confirm-error', !confirmValid);
+    if (!nameValid || !emailValid || !pwValid || !confirmValid) return;
+
+    const btn = document.getElementById('signup-submit');
+    setLoading(btn, true);
+
+    window.netlifyIdentity.gotrue.signup(email, password, { full_name: name })
+      .then(() => {
+        showStatus('Account created — check your email to confirm before logging in.', 'success');
+        setLoading(btn, false);
+      })
+      .catch(err => {
+        setLoading(btn, false);
+        const msg = /already exists|registered/i.test(err.message)
+          ? 'An account with that email already exists.'
+          : 'Could not create your account. Please try again.';
+        showStatus(msg, 'error');
+      });
+  });
+
+  // -----------------------------------------------------------
+  // Password reset request
+  // -----------------------------------------------------------
+  document.getElementById('reset-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    clearStatus();
+
+    const email = document.getElementById('reset-email').value.trim();
+    const emailValid = isEmail(email);
+    setFieldError('reset-email', 'reset-email-error', !emailValid);
+    if (!emailValid) return;
+
+    const btn = document.getElementById('reset-submit');
+    setLoading(btn, true);
+
+    window.netlifyIdentity.gotrue.requestPasswordRecovery(email)
+      .then(() => {
+        showStatus('If that email is registered, a reset link is on its way.', 'success');
+        setLoading(btn, false);
+      })
+      .catch(() => {
+        setLoading(btn, false);
+        showStatus('Could not send reset email. Please try again shortly.', 'error');
+      });
+  });
+
+  // -----------------------------------------------------------
+  // Already-signed-in / auth-callback handling
+  // -----------------------------------------------------------
+  window.addEventListener('load', () => {
+    const check = setInterval(() => {
+      if (!window.netlifyIdentity) return;
+      clearInterval(check);
+
+      window.netlifyIdentity.on('init', user => {
+        if (user) {
+          showStatus(`You're already signed in as ${user.email}`, 'info');
+          setTimeout(goToSite, 900);
+        }
+      });
+
+      window.netlifyIdentity.init();
+    }, 100);
+  });
+</script>
+
+</body>
+</html>
